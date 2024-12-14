@@ -1,0 +1,546 @@
+:root {
+    scroll-padding-top: 60px;
+    --main-color: rgb(0, 120, 255);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+    padding-block: 3rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.6875rem;
+    margin-bottom: .5rem;
+    color: rgb(30, 30, 30);
+    text-transform: uppercase;
+}
+
+.line {
+    width: 40px;
+    height: 5px;
+    background-color: var(--main-color);
+}
+
+/* start of navbar style */
+
+.bg-opacity-90 {
+    --bs-bg-opacity: 0.90;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.125rem;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 0rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-left: 1.875rem;
+    color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-nav .nav-link span {
+    position: relative;
+}
+
+.navbar .navbar-nav a:not(.active) span::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    position: absolute;
+    transition: width 0.5s;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-nav a:not(.active):hover span::before {
+    width: 80%;
+}
+
+.navbar .navbar-nav .active span::after {
+    content: "";
+    left: 0;
+    width: 80%;
+    height: 2px;
+    bottom: -5px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-toggler {
+    border: none;
+}
+
+.dropdown .dropdown-menu {
+    top: 28px;
+    display: none;
+    position: relative;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropstart:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu .dropdown-menu {
+    top: 0px;
+    right: 100%;
+    position: absolute;
+}
+
+/* end of navbar style */
+
+/* start of header style */
+#header {
+    z-index: 999;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0% 100%), url(../images/hero-bg.jpg);
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 5.375rem;
+    margin-bottom: 1.25rem;
+}
+
+#header p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3.75rem;
+}
+
+/* end of header style */
+
+/* start of about style */
+
+#about .img-div {
+    width: 150px;
+}
+
+#about .info-div {
+    width: 226px;
+    margin-inline: auto;
+}
+
+#about .test-img p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+    margin-bottom: 1rem;
+    color: rgb(30, 30, 30);
+}
+
+#about .test-img span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: rgb(78, 78, 78);
+}
+
+#about .test-img .parcent-1 {
+    width: 100%;
+    height: 10px;
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+    background-image: linear-gradient(to right, var(--main-color) 0% 85%, rgb(205, 225, 248) 85% 100%);
+}
+
+#about .test-img .parcent-2 {
+    width: 100%;
+    height: 10px;
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+    background-image: linear-gradient(to right, var(--main-color) 0% 75%, rgb(205, 225, 248) 75% 100%);
+}
+
+#about .test-img .parcent-3 {
+    width: 100%;
+    height: 10px;
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+    background-image: linear-gradient(to right, var(--main-color) 0% 50%, rgb(205, 225, 248) 50% 100%);
+}
+
+#about .test-img .parcent-4 {
+    width: 100%;
+    height: 10px;
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+    background-image: linear-gradient(to right, var(--main-color) 0% 90%, rgb(205, 225, 248) 90% 100%);
+}
+
+#about .test-about h3,
+#contact h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.375rem;
+    margin-bottom: 2.5rem;
+    color: rgb(30, 30, 30);
+}
+
+#about .test-about h3,
+#contact h3 {
+    position: relative;
+}
+
+#about .test-about h3::before,
+#contact h3::before {
+    content: "";
+    height: 3px;
+    width: 100px;
+    bottom: -0.75rem;
+    position: absolute;
+    background-color: var(--main-color);
+}
+
+#about .test-about p {
+    max-width: 480px;
+}
+
+/* end of about style */
+/* start of services style */
+
+#services p,
+#work p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(78, 78, 78);
+}
+
+#services .icon {
+    width: 110px;
+    height: 110px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    transition: all 0.5s;
+    border: .625rem solid var(--main-color);
+}
+
+#services .inner:hover .icon,
+#contact .div-icon:hover {
+    color: white;
+    border-color: rgb(205, 225, 248);
+    background-color: var(--main-color);
+}
+
+#services h3 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.6875rem;
+    padding-block: .375rem;
+    margin-bottom: .5rem;
+    color: rgb(30, 30, 30);
+    text-transform: uppercase;
+}
+
+/* end of services style */
+
+/* start of name-none style */
+.name-none {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top right;
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7) 0% 100%), url(../images/post-3.jpg);
+}
+
+.name-none .icon-div {
+    width: 90px;
+    height: 90px;
+    border: .625rem solid rgb(205, 225, 248);
+}
+
+.name-none i {
+    font-size: 2rem;
+}
+
+.name-none h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 0rem;
+}
+
+.name-none p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+/* end of name-none style */
+/* start of work style */
+#work h3 {
+    font-size: 1.1875rem;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 0rem;
+    color: rgb(30, 30, 30);
+}
+
+#work span {
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    color: rgb(78, 78, 78);
+}
+
+#work span.sp-color {
+    color: var(--main-color);
+}
+
+#work a {
+    width: 40px;
+    height: 40px;
+    color: var(--main-color);
+    border: .1875rem solid var(--main-color);
+}
+
+#work img {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+#work .card:hover img {
+    transform: scale(1.3);
+}
+
+/* end of work style */
+
+/* start of name-none-two style */
+.name-none-two,
+#contact {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7) 0% 100%), url(../images/overlay-bg.jpg);
+}
+
+.name-none-two p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.875rem;
+}
+
+.name-none-two h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 2.125rem;
+    margin-block: 1rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* end of name-none-two style */
+/* start of blog style */
+#blog p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: rgb(78, 78, 78);
+}
+
+.card h3 a {
+    font-size: 1.3125rem;
+    font-weight: 500;
+    line-height: 1.5625rem;
+    text-decoration: none;
+    transition: color 0.5s;
+    color: rgb(30, 30, 30);
+}
+
+#blog .card-footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+#blog .card-footer a {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-decoration: none;
+    transition: color 0.5s;
+    color: rgb(30, 30, 30);
+}
+
+#blog .card-footer span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: rgb(78, 78, 78);
+}
+
+#blog a:hover {
+    color: var(--main-color);
+}
+
+#blog .badge-size {
+    font-size: .6875rem;
+    font-weight: 500;
+    line-height: .8125rem;
+}
+
+/* end of blog style */
+/* start of contact style */
+.form-control:focus {
+    border-color: var(--main-color);
+}
+
+#contact button {
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.8125rem;
+}
+
+#contact .btn-primary {
+    border: none;
+    transition: all 0.5s;
+}
+
+#contact .btn-primary:hover {
+    background-color: rgba(0, 120, 255, 0.8);
+    outline: .1875rem solid rgba(0, 120, 255, 0.3);
+}
+
+#contact .div-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.9375rem;
+    border-radius: 50%;
+    align-items: center;
+    transition: all 0.5s;
+    justify-content: center;
+    border: .1875rem solid var(--main-color);
+}
+
+#contact .div-icon i {
+    transform: translateY(-30%);
+}
+
+#contact p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.875rem;
+    color: rgb(78, 78, 78);
+}
+
+#contact li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(78, 78, 78);
+}
+
+#contact li span {
+    color: var(--main-color);
+}
+
+/* end of contact style */
+/* start of footer style */
+footer {
+    background-color: rgb(0, 98, 211);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+footer p span {
+    font-weight: 700;
+}
+
+/* end of footer style */
+/* start of scroll-up style */
+a.scroll-up {
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    transition: background-color 0.5s;
+    background-color: var(--main-color);
+}
+
+a.scroll-up:hover {
+    background-color: rgba(0, 120, 255, 0.8);
+}
+
+/* end of scroll-up style */
+
+/* start of media query */
+
+@media screen and (max-width:992px) {
+    .dropdown-menu .dropdown-menu {
+        left: 0%;
+        top: 340%;
+    }
+}
+
+@media screen and (max-width:992px) and (min-width:576px) {
+    h1 {
+        width: 696px;
+    }
+}
+
+@media screen and (max-width:992px) and (min-width:768px) {
+    #about .col-query {
+        flex-direction: column;
+    }
+
+    #about .info-div {
+        margin-left: 0rem;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 3.625rem;
+    }
+
+    #header p {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #about .col-query {
+        flex-direction: column;
+    }
+
+    #about .info-div {
+        margin-left: 0rem;
+        margin-right: auto;
+    }
+}
+
+/* end of media query */
